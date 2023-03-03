@@ -61,8 +61,12 @@ mode:"Disable Dark mode"
         <li className="nav-item">
          <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About</Link>
         </li>
-       
-     
+        <li className="nav-item">
+         <Link className={`nav-link ${location.pathname==="/addproduct"?"active":""}`} to="/addproduct">Add Product</Link>
+        </li>
+        <li className="nav-item">
+         <Link className={`nav-link ${location.pathname==="/energysources"?"active":""}`} to="/energysources">Energy Sources</Link>
+        </li>
       </ul>
       
       {

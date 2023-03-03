@@ -14,6 +14,8 @@ import { useContext, useEffect, useState } from 'react';
 import ConsumerState from './context/consumer/ConsumerState';
 import ConsumerForm from './components/ConsumerForm';
 import UserState from './context/User/UserState';
+import Addproduct from './components/Addproduct';
+import EnergySource from './components/EnergySource';
 // import setBodyColor from './setBodyColor'
 
 function App() {
@@ -52,6 +54,8 @@ function App() {
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<Signup/>} />
       <Route path="/consumerform" element={<ConsumerForm/>} />
+      <Route path='/addproduct' element={<Addproduct/>}/>
+      <Route path='/energysources' element={<EnergySource/>}/>
      
 </Routes>
     {/* </div> */}
