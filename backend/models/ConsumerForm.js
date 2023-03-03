@@ -18,14 +18,10 @@ const ConsumerFormSchema = new Schema({
     type:String,
     required:true
   },
-  // bio_waste_generated true if biodegradable fuel waste available in Org
-  bio_waste_generated:{
-    type:Boolean,
-    required:true 
-  },
   // bio_waste_volume in m^3 
   bio_waste_volume:{
-    type:Number
+    type:Number,
+    default:0
   },
   // energy_consumption monthly in units (kW/hr)
   energy_consumption:{
