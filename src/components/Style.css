@@ -1,0 +1,184 @@
+
+:root{
+          
+    --secondaryColor:violet;
+    --tertiaryColor:grey;
+    --dangerColor:red;
+    --BodyColor:indigo;
+}
+body {
+  
+    background-color: var(--BodyColor);
+    margin: 0px;
+    padding: 0px;
+}
+
+.deleteIcon:hover{
+color: red;
+}
+
+.editIcon:hover{
+    color:black;
+    font-weight:bold;
+    }
+i{
+    cursor:pointer;
+}
+.login_signupForm{
+    font-weight: bold;
+    color: white;
+    text-shadow: 6px 3px #eb94eb;
+
+
+}
+.form-signUp{
+    width: 100%;
+    border: 2.7px solid #ffffff;
+    /* margin: 10px 20px; */
+    padding: 21px 32px;
+    box-shadow: 12px 12px 2px 2px rgb(202 0 237 / 55%);
+    border-radius: 32px;
+    background-image: linear-gradient(12deg,#c914ff,#dd6aff);
+    font-weight: bold;
+    color: white;
+    max-width: 500px;
+    z-index: 2;
+}
+    
+
+
+
+.signUp-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+    top: -66px;
+    z-index: 2;
+}
+.alertCss{
+    z-index: 10;
+    order: 4;
+    margin: 8px 6px;
+    position: sticky;
+    top: 64px;
+    left: 160vw;
+    width: max-content;
+    display: inline;
+    z-index: 2;
+}
+
+
+.header{
+    display: grid;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.navigation-bar{
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    /* background: #d43bff; */
+    font-weight: bold;
+}
+
+.nav-btn{
+   
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 4px 8px;
+    background-color: #d955ff;
+    border: 2px solid #b700eb;
+    color:white;
+   
+}
+
+
+.nav-btn:active{
+    background-color:#9f14c6;
+    color:white;
+
+}
+
+.nav-btn:hover{
+    color: white;
+    /* background-color:#b700eb; */
+    box-shadow: 3px 3px rgb(240, 155, 237);
+}
+.form-control{
+    /* background-color: #f8dfff; */
+}
+
+
+.form-btn{
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 4px 8px;
+    background-color: #d955ff;
+    border: 2px solid #b700eb;
+    color:white;
+}
+
+.form-btn:active{
+    background-color:#9f14c6;
+    color:white;
+
+}
+
+.form-btn:hover{
+    color: white;
+    /* background-color:#b700eb; */
+    /* box-shadow: 3px 3px rgb(240, 155, 237); */
+}
+.sub-btn:hover{
+     background-color: #d43bff;
+}
+
+@media screen and (max-width: 400px) {
+    .form-signUp{
+      background-color: lightgreen;
+      font-size:small;
+    }
+    /* .form-control{
+            font-size: 5px;
+    } */
+  }
+  .min-vw-100 {
+    min-width: 98vw!important;
+}
+
+.card-body{
+   
+}
+
+.card-header{
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    color:black;
+    /* background-color:#b700eb; */
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color:white
+  }
+  .about-section h2 {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+  .about-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .about-section li {
+    font-size: 17px;
+    margin: 10px 0;
+  }
