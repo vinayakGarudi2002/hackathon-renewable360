@@ -23,7 +23,7 @@ router.post(
       return res.status(400).json("Enter valid data");
     }
 
-    let {  type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no
+    let {  type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no, cost_per_unit_of_clean_energy_setup
     } = req.body;
 
     try {
@@ -35,6 +35,7 @@ router.post(
         subsidy_percentage,
         industry_certification_name,
         industry_certification_no,
+        cost_per_unit_of_clean_energy_setup,
         user: userid,
       });
       const savedProductDataModel = await product_data.save();
