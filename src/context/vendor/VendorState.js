@@ -9,7 +9,7 @@ const VendorState = (props) => {
 
 
   const addData = async (addingData) => {
-    const {type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no} = addingData;
+    const {type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no, cost_per_unit_of_clean_energy_setup, product_photo} = addingData;
 
     try {
       const response = await fetch(`${host}/api/consumer/vendordata`, {
@@ -20,7 +20,7 @@ const VendorState = (props) => {
           "auth-token":
             localStorage.getItem('token'),
         },
-        body: JSON.stringify( {type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no}),
+        body: JSON.stringify( { type_of_source, service_location, subsidy_scheme, subsidy_percentage,industry_certification_name,industry_certification_no, cost_per_unit_of_clean_energy_setup, product_photo,}),
       });
       const data = await response.json();
       if (response.status === 200) {

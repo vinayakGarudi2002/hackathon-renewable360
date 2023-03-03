@@ -41,6 +41,11 @@ const ProductDataSchema = new Schema({
   cost_per_unit_of_clean_energy_setup:{
     type:Number,
     required:true
+  },
+
+  product_photo:{
+    type:String,
+    required:true
   }
 
   
