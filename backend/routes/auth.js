@@ -41,9 +41,11 @@ router.post(
       // generate a salt and hash the password
       const salt = await bcrypt.genSalt(10);
       const hash = await bcrypt.hash(req.body.password, salt);
+      console.log(req.body.typeUser)
       user = await User.create({
         name: req.body.name,
         email: req.body.email,
+        typeUser:req.body.typeUser,
         password: hash,
       }).catch((error) => {
         // Return a response with a status code of 500 (Internal Server Error)

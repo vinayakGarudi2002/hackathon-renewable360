@@ -10,11 +10,14 @@ const {bgColor}=useContext(bgContext);
 
   let navigate = useNavigate();
   const host = "http://localhost:5000"
+  // const [ typeUser , setTypeUser]=useState("")
   const [loginForm, setLoginForm] = useState({
     name: "",
     email: "",
     cpassword: "",
-    password:""
+    password:"",
+    typeUser:""
+   
   });
 
   // const [password,setPassword]=useState("");
@@ -24,13 +27,14 @@ const {bgColor}=useContext(bgContext);
       return {
         ...prevState,
         [e.target.name]: [e.target.value].toString(),
+       
       };
     });
   };
 
   const handleSubmit= async (e)=>{
     e.preventDefault();
-   const {email,password,name}=loginForm;
+   const {email,password,name,typeUser}=loginForm;
     if((loginForm.cpassword)===loginForm.password){
       try {
         const response = await fetch(`${host}/api/auth/createuser`, {
@@ -40,7 +44,7 @@ const {bgColor}=useContext(bgContext);
           mode: 'cors',
          
           },
-          body: JSON.stringify({email,password,name})
+          body: JSON.stringify({email,password,name,typeUser})
         });
         const data = await response.json();
         if (response.status === 200) {
@@ -142,6 +146,27 @@ const {bgColor}=useContext(bgContext);
               loginFormChange(e);
             }}
           />
+        </div>
+        <div>
+        <div className="signup-type">Type of User</div>
+<div className="form-check">
+  <input className="form-check-input" type="radio" name="typeUser" id="typeUser"   value={"vendor"}
+            onClick={(e) => {
+              loginFormChange(e);
+            }}/>
+  <label className="form-check-label" for="flexRadioDefault1">
+    Vendor
+  </label>
+</div>
+<div className="form-check">
+  <input className="form-check-input" type="radio" name="typeUser" id="typeUser"   value={"consumer"}
+            onClick={(e) => {
+              loginFormChange(e);
+            }}/>
+  <label className="form-check-label" for="flexRadioDefault2">
+    Consumer
+  </label>
+</div>
         </div>
         {/* <div className="mb-1 form-check">
           <input

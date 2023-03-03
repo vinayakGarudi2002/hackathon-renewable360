@@ -45,7 +45,7 @@ mode:"Disable Dark mode"
   return (
    <>
 <div className="bg"></div>
-<nav className="navbar navbar-expand-lg navbar-dark  navigation-bar min-vw-100" style={{
+<nav className="navbar navbar-expand-lg navbar-dark  navigation-bar min-vw-100 " style={{
   background:`${bgColor.nav}`
 }}>
   <div className="container-fluid">
