@@ -58,6 +58,11 @@ i{
     top: -66px;
     z-index: 2;
 }
+.signup-type{
+   font-size:"12px";
+   margin-top: 3px;
+   margin-bottom: 3px;
+}
 .alertCss{
     z-index: 10;
     order: 4;
@@ -182,3 +187,4 @@ i{
     font-size: 17px;
     margin: 10px 0;
   }
+
