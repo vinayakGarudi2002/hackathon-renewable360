@@ -43,10 +43,10 @@ const ProductDataSchema = new Schema({
     required:true
   },
 
-  // product_photo:{
-  //   type:String,
-  //   required:true
-  // }
+  product_photo:{
+    type:String,
+    required:true
+  }
 
   
 });
