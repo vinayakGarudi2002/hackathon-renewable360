@@ -12,7 +12,7 @@ const Addproduct = () => {
     const {type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no,cost_per_unit_of_clean_energy_setup} = addingData;
 
     try {
-      const response = await fetch(`${host}/api/vendor/vendordata`, {
+      const response = await fetch(`${host}/api/vendor_data/product_data`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

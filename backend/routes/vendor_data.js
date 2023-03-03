@@ -7,7 +7,7 @@ const fetchUser = require("../middleware/fetchuser");
 
 
 router.post(
-  "/product_Data", fetchUser,
+  "/product_data", fetchUser,
   [
     check("type_of_source", "Select an Option").isString(),
     check("service_location", "Invalid Input").isString(),
