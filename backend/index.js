@@ -9,7 +9,7 @@ const port = 5000
 
 app.use(cors())
 app.use(express.json());  // it basicaly allow me to get request in jason
-app.use("/api/vendor",require("./routes/product_data"))
+app.use("/api/vendor_data",require("./routes/vendor_data"))
 app.use("/api/energy_source",require("./routes/energy_source"))
 app.use("/api/consumer",require("./routes/consumer"))
 app.use("/api/auth",require("./routes/auth"))
