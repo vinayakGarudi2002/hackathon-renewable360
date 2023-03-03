@@ -9,10 +9,8 @@ const fetchUser = require("../middleware/fetchuser");
 router.post(
   "/energy_source", fetchUser,
   [
-    check("type_of_source", "Select an Option").isEmail(),
-    // check("customised_cost_solar", "Input Valid Cost").isNumber(),
-    // check("customised_cost_bio", "Input Valid Cost").isNumber(),
-    // check("customised_cost_solar_bio", "Input Valid Cost").isNumber(),
+    check("type_of_source", "Select an Option").isString(),
+
   ],
   async (req, res) => {
     // Check if there are validation errors
