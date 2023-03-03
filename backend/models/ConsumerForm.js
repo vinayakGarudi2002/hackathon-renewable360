@@ -3,6 +3,10 @@ const { Schema } = mongoose;
 
 // Define the schema for the user model
 const ConsumerFormSchema = new Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
+  },
   // The type_of_organisation field is required and must be a string
   type_of_organisation:{
     type:String,

@@ -6,15 +6,16 @@ const { check, validationResult } = require("express-validator");
 const fetchUser = require("../middleware/fetchuser");
 
 
+
 router.post(
   "/consumerdata", fetchUser,
   [
-    check("type_of_organisation", "Select an Option").isEmail(),
-    check("location", "Select an Option").isString(),
-    check("area_of_setup", "Select an Option").isString(),
-    check("bio_waste_generated", "Select an Option").isBoolean(),
-    check("bio_waste_volume", "Select an Option").isNumber(),
-    check("energy_consumption", "Select an Option").isNumber(),
+    // check("type_of_organisation", "Select an Option").isEmail(),
+    // check("location", "Select an Option").isString(),
+    // check("area_of_setup", "Select an Option").isString(),
+    // check("bio_waste_generated", "Select an Option").isBoolean(),
+    // check("bio_waste_volume", "Select an Option").isNumber(),
+    // check("energy_consumption", "Select an Option").isNumber(),
   ],
   async (req, res) => {
     // Check if there are validation errors
@@ -24,17 +25,18 @@ router.post(
       return res.status(400).json("Enter valid data");
     }
 
-    let { type_of_organisation, location, area_of_setup,bio_waste_generated, bio_waste_volume, energy_consumption
+    let { type_of_organisation, location, area_of_setup, bio_waste_volume, energy_consumption
     } = req.body;
 
     try {
+      const userid = req.user.id;
       const consumerdata = new ConsumerFormModel({
         type_of_organisation, 
         location, 
         area_of_setup,
-        bio_waste_generated, 
         bio_waste_volume, 
-        energy_consumption
+        energy_consumption,
+        user: userid,
       });
       const savedConsumerFormModel = await consumerdata.save();
       res.json(savedConsumerFormModel);

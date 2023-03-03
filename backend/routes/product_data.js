@@ -12,7 +12,7 @@ router.post(
     check("type_of_source", "Select an Option").isString(),
     check("service_location", "Invalid Input").isString(),
     check("subsidy_scheme", "Enter a Scheme").isString(),
-    check("subsidy_percentage", "Enter Subsidy Percentage").isNumber(),
+    // check("subsidy_percentage", "Enter Subsidy Percentage").isNumber(),
 
   ],
   async (req, res) => {

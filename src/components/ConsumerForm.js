@@ -46,6 +46,8 @@ const [biostate , setBiostate]=useState(0);
    
     
     if(status){
+      navigate(`/`);
+     
       console.log(status)
       toSetAlerts("visible","Data Added Success Fully","success")    //...alert
     }else{
@@ -54,6 +56,8 @@ const [biostate , setBiostate]=useState(0);
     
     }
  
+
+
   return (
     <div className={"container signUp-container  "} >
     <h1 className={"text-center my-2 login_signupForm"} style={{textShadow:`${bgColor.formText}`}}>Energy Form</h1>

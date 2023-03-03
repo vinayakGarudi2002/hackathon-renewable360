@@ -9,7 +9,7 @@ const ConsumerState = (props) => {
 
 
   const addData = async (addingData) => {
-    const {type_of_organisation,location,area_of_setup,bio_waste_generated,bio_waste_volume,energy_consumption} = addingData;
+    const {type_of_organisation,location,area_of_setup,bio_waste_volume,energy_consumption} = addingData;
 
     try {
       const response = await fetch(`${host}/api/consumer/consumerdata`, {
@@ -20,7 +20,7 @@ const ConsumerState = (props) => {
           "auth-token":
             localStorage.getItem('token'),
         },
-        body: JSON.stringify({type_of_organisation,location,area_of_setup,bio_waste_generated,bio_waste_volume,energy_consumption}),
+        body: JSON.stringify( {type_of_organisation,location,area_of_setup,bio_waste_volume,energy_consumption}),
       });
       const data = await response.json();
       if (response.status === 200) {

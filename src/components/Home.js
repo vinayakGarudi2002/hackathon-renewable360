@@ -15,7 +15,7 @@ const Home = () => {
  
   
  {/* <Notes/> */}
-<ConsumerForm/>
+{/* <ConsumerForm/> */}
     </div>
   );
 };
