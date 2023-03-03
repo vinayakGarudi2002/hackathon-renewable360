@@ -22,7 +22,7 @@ router.post(
       return res.status(400).json("Enter valid data");
     }
 
-    let { type_of_source, customised_cost_solar, customised_cost_bio, customised_cost_solar_bio
+    let { type_of_source
     } = req.body;
 
     try {
