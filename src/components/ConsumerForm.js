@@ -88,9 +88,9 @@ const [biostate , setBiostate]=useState(0);
               EnergyFormChange(e);
             }} >
   <option selected>Select Your Location</option>
-  <option value="Mumbai">Mumbai</option>
-  <option value="Kolkata2">Kolkata</option>
-  <option value="Delhi">Delhi</option>
+  <option value="Mumbai">Latur</option>
+  <option value="Kolkata2">Aurangaba</option>
+  <option value="Delhi">Nashik</option>y
 </select>
     </div>
     <div className="mb-1">
