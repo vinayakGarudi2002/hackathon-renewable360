@@ -26,7 +26,18 @@ const ProductDataSchema = new Schema({
   subsidy_percentage:{
     type:Number,
     required:true
+  },
+
+  industry_certification_name:{
+    type:String,
+    required:true
+  },
+
+  industry_certification_no:{
+    type:Number,
+    required: true
   }
+
   
 });
 
