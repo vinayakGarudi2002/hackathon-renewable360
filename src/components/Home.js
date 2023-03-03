@@ -1,4 +1,5 @@
 import React from "react";
+import ConsumerForm from "./ConsumerForm";
 import Notes from "./Notes";
 
 
@@ -14,7 +15,7 @@ const Home = () => {
  
   
  {/* <Notes/> */}
-    
+<ConsumerForm/>
     </div>
   );
 };

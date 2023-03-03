@@ -11,6 +11,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import BgContext from './context/Bg';
 import { useContext, useEffect, useState } from 'react';
+import ConsumerState from './context/consumer/ConsumerState';
 // import setBodyColor from './setBodyColor'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
   
   return (
+    <ConsumerState>
     <NoteState>
     <AlertContext>
    <BgContext>
@@ -55,7 +57,7 @@ function App() {
     </BgContext>
     </AlertContext>
     </NoteState>
- 
+    </ConsumerState>
   );
 }
 
