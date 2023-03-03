@@ -9,10 +9,8 @@ const fetchUser = require("../middleware/fetchuser");
 router.post(
   "/energy_source", fetchUser,
   [
-    check("type_of_source", "Select an Option").isEmail(),
-    // check("customised_cost_solar", "Input Valid Cost").isNumber(),
-    // check("customised_cost_bio", "Input Valid Cost").isNumber(),
-    // check("customised_cost_solar_bio", "Input Valid Cost").isNumber(),
+    check("type_of_source", "Select an Option").isString(),
+
   ],
   async (req, res) => {
     // Check if there are validation errors
@@ -22,16 +20,13 @@ router.post(
       return res.status(400).json("Enter valid data");
     }
 
-    let { type_of_source, customised_cost_solar, customised_cost_bio, customised_cost_solar_bio
+    let { type_of_source
     } = req.body;
 
     try {
         const userid = req.user.id;
         const energy_source = new EnergySourceModel ({
             type_of_source, 
-            customised_cost_solar, 
-            customised_cost_bio, 
-            customised_cost_solar_bio,
             user: userid,
       });
       const savedEnergySourceModel  = await energy_source.save();
