@@ -29,9 +29,6 @@ router.post(
         const userid = req.user.id;
         const energy_source = new EnergySourceModel ({
             type_of_source, 
-            customised_cost_solar, 
-            customised_cost_bio, 
-            customised_cost_solar_bio,
             user: userid,
       });
       const savedEnergySourceModel  = await energy_source.save();

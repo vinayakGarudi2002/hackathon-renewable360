@@ -12,21 +12,6 @@ const EnergySourceSchema = new Schema({
     type:String,
     required:true
   },
-
-  // energy_consumption monthly in units (kW/hr)
-  customised_cost_solar:{
-    type:Number,
-    default:50000
-  },
-  customised_cost_bio:{
-    type:Number,
-    default: 70000
-  },  
-  customised_cost_solar_bio:{
-    type:Number,
-    default: 120000 
-  },
-
 });
 
 // Create the user model using the UserSchema schema
