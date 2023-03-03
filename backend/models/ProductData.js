@@ -36,6 +36,11 @@ const ProductDataSchema = new Schema({
   industry_certification_no:{
     type:Number,
     required: true
+  },
+
+  cost_per_unit_of_clean_energy_setup:{
+    type:Number,
+    required:true
   }
 
   
