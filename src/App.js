@@ -13,6 +13,7 @@ import BgContext from './context/Bg';
 import { useContext, useEffect, useState } from 'react';
 import ConsumerState from './context/consumer/ConsumerState';
 import ConsumerForm from './components/ConsumerForm';
+import UserState from './context/User/UserState';
 // import setBodyColor from './setBodyColor'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
   
   return (
+    <UserState>
     <ConsumerState>
     <NoteState>
     <AlertContext>
@@ -60,6 +62,7 @@ function App() {
     </AlertContext>
     </NoteState>
     </ConsumerState>
+    </UserState>
   );
 }
 

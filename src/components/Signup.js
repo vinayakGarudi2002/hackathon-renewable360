@@ -48,7 +48,6 @@ const {bgColor}=useContext(bgContext);
         });
         const data = await response.json();
         if (response.status === 200) {
-  
          localStorage.setItem("token",data.authtoken);
          navigate(`/consumerform`);
          toSetAlerts("visible","Success fully signup","success")    //...alert

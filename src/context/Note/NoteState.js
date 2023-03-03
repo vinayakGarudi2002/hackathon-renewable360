@@ -3,6 +3,7 @@ import notecontext from "./notecontext";
 // import { alertContext } from "../Alert/AlertContext"; // Alert
 
 const NoteState = (props) => {
+  
   const initialNote = [];
   const [note, setNote] = useState(initialNote);
 

@@ -15,7 +15,6 @@ const [biostate , setBiostate]=useState(0);
 
 
 
-
   let navigate = useNavigate();
   const host = "http://localhost:5000"
   // const [ typeUser , setTypeUser]=useState("")
