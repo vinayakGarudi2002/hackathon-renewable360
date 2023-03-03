@@ -3,6 +3,10 @@ const { Schema } = mongoose;
 
 
 const ProductDataSchema = new Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
+  },
 
   type_of_source:{
     type:String,

@@ -3,7 +3,11 @@ const { Schema } = mongoose;
 
 
 const EnergySourceSchema = new Schema({
-
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
+  },
+  
   type_of_source:{
     type:String,
     required:true

@@ -27,11 +27,13 @@ router.post(
     } = req.body;
 
     try {
+      const userid = req.user.id;
       const product_data = new ProductDataModel({
         type_of_source, 
         service_location, 
         subsidy_scheme, 
-        subsidy_percentage
+        subsidy_percentage,
+        user: userid,
       });
       const savedProductDataModel = await product_data.save();
       res.json(savedProductDataModel);

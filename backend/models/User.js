@@ -3,6 +3,10 @@ const { Schema } = mongoose;
 
 // Define the schema for the user model
 const UserSchema = new Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
+  },
   // The name field is required and must be a string
   name:{
     type:String,
