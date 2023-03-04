@@ -9,7 +9,7 @@ const VendorState = (props) => {
 
 
   const addData = async (addingData) => {
-    const {type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no} = addingData;
+    const {type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no, cost_per_unit_of_clean_energy_setup, product_photo} = addingData;
 
     try {
       const response = await fetch(`${host}/api/vendor/vendordata`, {
@@ -21,7 +21,7 @@ const VendorState = (props) => {
             localStorage.getItem('token'),
         },
 
-        body: JSON.stringify( {  type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no, cost_per_unit_of_clean_energy_setup
+        body: JSON.stringify( {  type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no, cost_per_unit_of_clean_energy_setup,product_photo
         }),
       });
       const data = await response.json();
