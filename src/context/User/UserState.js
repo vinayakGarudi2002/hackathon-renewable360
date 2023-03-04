@@ -5,7 +5,10 @@ import usercontext from "./usercontext";
 const UserState = (props) => {
 
   const [data, setData]=useState()
+
+  const[ typeUser , setTypeUser]=useState()
   // const alertcontext = useContext(alertContext);   // alert
+
 
   const host = "http://localhost:5000";
 
@@ -43,7 +46,7 @@ const UserState = (props) => {
 
   return (
     <usercontext.Provider
-      value={{ getUser , setData}}
+      value={{ getUser , setData ,setTypeUser,typeUser }}
     >
       {props.children}
     </usercontext.Provider>

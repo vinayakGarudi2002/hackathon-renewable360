@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { alertContext } from "../context/Alert/AlertContext";  //----alert
 import { bgContext } from '../context/Bg';
 
+import usercontext from "../context/User/usercontext";
 import "./Style.css"
 const Signup = () => {
+  const { setTypeUser } = useContext(usercontext);
 const {toSetAlerts}=useContext(alertContext);   // ----alert
 const {bgColor}=useContext(bgContext);
 
@@ -48,8 +50,12 @@ const {bgColor}=useContext(bgContext);
         });
         const data = await response.json();
         if (response.status === 200) {
-         localStorage.setItem("token",data.authtoken);
-         navigate(`/consumerform`);
+          setTypeUser(typeUser)
+          localStorage.setItem("token",data.authtoken);
+          navigate(`/`);
+
+        //  localStorage.setItem("token",data.authtoken);
+        //  navigate(`/consumerform`);
          toSetAlerts("visible","Success fully signup","success")    //...alert
 
          return;

@@ -2,13 +2,13 @@ import React , {useState,useContext} from 'react'
 import { useNavigate } from "react-router-dom";
 import { alertContext } from "../context/Alert/AlertContext";  //----alert
 import { bgContext } from '../context/Bg';
-
+import usercontext from "../context/User/usercontext";
 
 
 const Login = () => {
   const {toSetAlerts}=useContext(alertContext);   // ----alert
   const {bgColor}=useContext(bgContext);
-
+  const { setTypeUser } = useContext(usercontext);
     const [loginForm, setLoginForm] = useState({
   
         email: "",
@@ -42,6 +42,7 @@ const Login = () => {
             if (response.status === 200) {
       
              localStorage.setItem("token",data.authtoken);
+             setTypeUser(data.typeUser)
              navigate(`/`);
          toSetAlerts("visible","Success fully Logged in","success")    //...alert
 

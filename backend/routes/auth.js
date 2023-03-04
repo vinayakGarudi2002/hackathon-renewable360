@@ -113,7 +113,7 @@ router.post(
       // sign the JWT with the payload and the secret
       var authtoken = jwt.sign(data, JWT_SEC);
       // reponse with token
-      res.json({ authtoken });
+      res.json({ authtoken , typeUser:user.typeUser});
     } catch (error) {
       // Return a response with a status code of 500 (Internal Server Error) and the error message
       res.status(500).send("some error ocured");

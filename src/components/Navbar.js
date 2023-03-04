@@ -2,8 +2,11 @@ import React ,{useContext} from 'react'
 import { useNavigate } from "react-router-dom";
 import {  Link,useLocation } from "react-router-dom";
 import { bgContext } from '../context/Bg';
+import usercontext from "../context/User/usercontext";
+
 
 const Navbar = (props) => {
+  const { typeUser,setTypeUser } = useContext(usercontext);
   const {bgColor,toSetBgColor}=useContext(bgContext);
 
   const location=useLocation();
@@ -11,6 +14,7 @@ const Navbar = (props) => {
   const handleLogout=()=>{
     localStorage.removeItem('token')
     navigate("/login")
+    setTypeUser()
   }
   // useEffect(()=>{
   //   console.log(location.pathname)
@@ -62,10 +66,21 @@ mode:"Disable Dark mode"
          <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About</Link>
         </li>
         <li className="nav-item">
-         <Link className={`nav-link ${location.pathname==="/addproduct"?"active":""}`} to="/addproduct">Add Product</Link>
+         
         </li>
+
         <li className="nav-item">
-         <Link className={`nav-link ${location.pathname==="/energysources"?"active":""}`} to="/energysources">Energy Sources</Link>
+        {
+          typeUser=="vendor" ?<Link className={`nav-link ${location.pathname==="/addproduct"?"active":""}`} to="/addproduct">Add Product</Link> : ""
+             
+        }
+        </li>
+
+        <li className="nav-item">
+        {
+          typeUser=="consumer" ? <Link className={`nav-link ${location.pathname==="/energysources"?"active":""}`} to="/energysources">Energy Sources</Link> : ""
+             
+        }
         </li>
       </ul>
       

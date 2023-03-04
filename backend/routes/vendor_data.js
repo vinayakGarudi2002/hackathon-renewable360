@@ -28,7 +28,7 @@ const fetchUser = require("../middleware/fetchuser");
 // let upload = multer({ storage, fileFilter });
 
 router.post(
-  "/product_data", fetchUser, upload.single('product_photo'),
+  "/product_data", fetchUser, 
   [
     check("type_of_source", "Select an Option").isString(),
     check("service_location", "Invalid Input").isString(),
