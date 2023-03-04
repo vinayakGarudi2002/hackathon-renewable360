@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { alertContext } from "../context/Alert/AlertContext"; //----alert
 import { bgContext } from "../context/Bg";
 import vendorcontext from "../context/my_vendor/vendorcontext";
+import axios from 'axios';
 import "./Style.css";
 
 
 const Addproduct = () => {
 
   const addData = async (addingData) => {
-    const {type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no,cost_per_unit_of_clean_energy_setup} = addingData;
+    const {type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no,cost_per_unit_of_clean_energy_setup,product_photo} = addingData;
 
     try {
       const response = await fetch(`${host}/api/vendor_data/product_data`, {
@@ -21,7 +22,7 @@ const Addproduct = () => {
             localStorage.getItem('token'),
         },
 
-        body: JSON.stringify( {  type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no, cost_per_unit_of_clean_energy_setup
+        body: JSON.stringify( {  type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no, cost_per_unit_of_clean_energy_setup, product_photo
         }),
       });
       const data = await response.json();
@@ -56,6 +57,7 @@ const Addproduct = () => {
     industry_certification_name: "",
     industry_certification_no: "",
     cost_per_unit_of_clean_energy_setup: "",
+    product_photo: ""
   });
 
   // const [password,setPassword]=useState("");
@@ -65,12 +67,35 @@ const Addproduct = () => {
       return {
         ...prevState,
         [e.target.name]: [e.target.value].toString(),
+        
       };
-    });
+
+    }
+    
+    
+    );
+    // setProductForm({...ProductForm, [e.target.name]: e.target.value});
   };
+  const handlePhoto = (e) => {
+    setProductForm({...ProductForm, product_photo: e.target.files[0]});
+}
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    //photo
+    const formData = new FormData();
+    formData.append('product_photo', ProductForm.product_photo);
+     //photo
+    axios.post('http://localhost:5000/api/vendor_data/product_data', formData)
+         .then(res => {
+            console.log(res);
+         })
+         .catch(err => {
+            console.log(err);
+         });
+
+   //photo
     const status = await addData(ProductForm);
 
     if (status) {
@@ -233,7 +258,14 @@ const Addproduct = () => {
               }}
             />
           </div>
-
+        <div>
+        <input 
+                type="file" 
+                accept=".png, .jpg, .jpeg"
+                name="product_photo"
+                onChange={handlePhoto}
+            />
+        </div>
           {/* <div className="mb-1 form-check">
           <input
             type="checkbox"
