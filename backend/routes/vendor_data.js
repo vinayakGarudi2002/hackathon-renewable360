@@ -71,4 +71,17 @@ router.post(
   }
 );
 
+
+router.get("/fetchproductdata", fetchUser, async (req, res) => {
+  try {
+    const data = await product_data.find({ type_of_source: req.body.type_of_source });
+    res.status(200).json(data);
+  } 
+  catch (err) {
+    res.status(500).send("Internal error ocurred");
+    console.log(err);
+  }
+});
+
+
 module.exports = router;
