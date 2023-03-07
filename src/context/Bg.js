@@ -4,7 +4,7 @@ const bgContext = createContext();
 
 const BgContext = (props) => {
     const [bgColor,setBgColor]=useState({
-      nav:"#d43bff",
+      nav:"lightseagreen",
       form:"#f8dfff",
       cardTag:"rgb(212 69 255)",
       cardBody:"rgb(222 109 255)",
