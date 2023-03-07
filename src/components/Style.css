@@ -6,13 +6,118 @@
     --dangerColor:red;
     --BodyColor:indigo;
 }
-body {
-  
-    background-color: var(--BodyColor);
-    margin: 0px;
-    padding: 0px;
+
+.box{
+  display: flex;
+  /* justify-content: center; */
+  align-items:center;
+  height: 8vh;
+  background-color: white;
+  color:green;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  background-size: cover;
+  /* position: fixed; */
+
+  top: 0;
+}
+.box1{
+  display: flex;
+  justify-content: center; 
+  align-items:center;
+  height: 30vh;
+  background-color:white;
+  bottom:20px ;
+  position: fixed;
+  width:100%;
+  background-size: cover;
+
+}
+.img12{
+  height:7vh;
+  width:7vh;
+  position:relative;
+
+}
+.topv{
+  padding-top: 3%;
+  text-align: center;
+  color: orange;
+  font-weight: 500;
+  font-size: 150;
+}
+img{
+  height:24vh;
+  width:24vh;
+  position:relative;
+}
+.t12{
+
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  opacity: 15;
+
 }
 
+body {
+/*   
+    background-color: var(--BodyColor); */
+    margin: 0px;
+    padding: 0px;
+  
+   
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+.b1{
+  background-image:url("./img/i3.png")  ;
+  background-color: #c914ff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+  height:70vh;
+    
+
+}
+.t1{
+  text-align: center;
+  color: red;
+}
+.navbar{
+  opacity: 1.5;
+ 
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height:5vh;
+  background-color: black;
+  color:white;
+  width: 100%;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+
+}
+
+.bg{
+  background-color: green;
+}
 .deleteIcon:hover{
 color: red;
 }
@@ -55,7 +160,7 @@ i{
     height: 100%;
     flex-direction: column;
     position: relative;
-    top: -66px;
+    top: -40px;
     z-index: 2;
 }
 .signup-type{
@@ -76,13 +181,13 @@ i{
 }
 
 
-.header{
+/* .header{
     display: grid;
     position: sticky;
     top: 0px;
     left: 0px;
     z-index: 1;
-}
+} */
 .navigation-bar{
     position: sticky;
     top: 0px;
@@ -97,15 +202,15 @@ i{
     border-radius: 6px;
     font-weight: bold;
     padding: 4px 8px;
-    background-color: #d955ff;
-    border: 2px solid #b700eb;
+    background-color: red;
+    border: 2px solid red;
     color:white;
    
 }
 
 
 .nav-btn:active{
-    background-color:#9f14c6;
+    background-color:green;
     color:white;
 
 }
@@ -115,22 +220,20 @@ i{
     /* background-color:#b700eb; */
     box-shadow: 3px 3px rgb(240, 155, 237);
 }
-.form-control{
-    /* background-color: #f8dfff; */
-}
+
 
 
 .form-btn{
     border-radius: 6px;
     font-weight: bold;
     padding: 4px 8px;
-    background-color: #d955ff;
-    border: 2px solid #b700eb;
+    background-color: red;
+    border: 2px solid red;
     color:white;
 }
 
 .form-btn:active{
-    background-color:#9f14c6;
+    background-color:green;
     color:white;
 
 }
@@ -157,9 +260,7 @@ i{
     min-width: 98vw!important;
 }
 
-.card-body{
-   
-}
+
 
 .card-header{
     border-top-right-radius: 12px;
@@ -357,20 +458,15 @@ html {
   }
   
   
-  
-  
-  
-  
-  
 
   
   .navbar {
-    padding-top: 50px;
+    padding-top: 10px;
     text-align: center;
   }
   
   .navbar h1 {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     text-transform: capitalize;
   }
   
