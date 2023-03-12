@@ -89,10 +89,10 @@ mode:"Disable Dark mode"
       <Link className="btn   btn-sm nav-btn" to="/signup" role="button"style={{ boxShadow: `${location.pathname==="/signup"?"3px 3px rgb(240 155 237)":""}`,marginLeft:"10px"}}>Sign up</Link></span>: <button className={"btn  btn-sm nav-btn"} onClick={handleLogout} style={{ boxShadow: `${location.pathname==="/logout"?"3px 3px rgb(240 155 237)":""}`,
      marginLeft: "-4px" }}>Logout</button>
       }
-      <button className={"btn mx-2 btn-sm nav-btn"} onClick={()=>{
+      {/* <button className={"btn mx-2 btn-sm nav-btn"} onClick={()=>{
        handleBackgroundColor()
            
-      }}>{bgColor.mode}</button>
+      }}>{bgColor.mode}</button> */}
     </div>
   </div>
 </nav>

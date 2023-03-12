@@ -1,392 +1,433 @@
 
 :root{
           
-    --secondaryColor:violet;
-    --tertiaryColor:grey;
-    --dangerColor:red;
-    --BodyColor:indigo;
+  --secondaryColor:violet;
+  --tertiaryColor:grey;
+  --dangerColor:red;
+  --BodyColor:indigo;
 }
 body {
   
-    background-color: var(--BodyColor);
-    margin: 0px;
-    padding: 0px;
+  background-color: var(--BodyColor);
+  margin: 0px;
+  padding: 0px;
+  background-image:url("./img/i3.png")  ;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
 }
+
 
 .deleteIcon:hover{
 color: red;
 }
 
 .editIcon:hover{
-    color:black;
-    font-weight:bold;
-    }
+  color:black;
+  font-weight:bold;
+  }
 i{
-    cursor:pointer;
+  cursor:pointer;
 }
 .login_signupForm{
-    font-weight: bold;
-    color: white;
-    text-shadow: 6px 3px #eb94eb;
+  font-weight: bold;
+  color: white;
+  text-shadow: 6px 3px #eb94eb;
 
 
 }
 .form-signUp{
-    width: 100%;
-    border: 2.7px solid #ffffff;
-    /* margin: 10px 20px; */
-    padding: 21px 32px;
-    box-shadow: 12px 12px 2px 2px rgb(202 0 237 / 55%);
-    border-radius: 32px;
-    background-image: linear-gradient(12deg,#c914ff,#dd6aff);
-    font-weight: bold;
-    color: white;
-    max-width: 500px;
-    z-index: 2;
+  width: 100%;
+  border: 2.7px solid #ffffff;
+  /* margin: 10px 20px; */
+  padding: 21px 32px;
+  box-shadow: 12px 12px 2px 2px rgb(202 0 237 / 55%);
+  border-radius: 32px;
+  background-image: linear-gradient(12deg,#c914ff,#dd6aff);
+  font-weight: bold;
+  color: white;
+  max-width: 500px;
+  z-index: 2;
 }
-    
+  
 
 
 
 .signUp-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    flex-direction: column;
-    position: relative;
-    top: -66px;
-    z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  top: -66px;
+  z-index: 2;
 }
 .signup-type{
-   font-size:"12px";
-   margin-top: 3px;
-   margin-bottom: 3px;
+ font-size:"12px";
+ margin-top: 3px;
+ margin-bottom: 3px;
 }
 .alertCss{
-    z-index: 10;
-    order: 4;
-    margin: 8px 6px;
-    position: sticky;
-    top: 64px;
-    left: 160vw;
-    width: max-content;
-    display: inline;
-    z-index: 2;
+  z-index: 10;
+  order: 4;
+  margin: 8px 6px;
+  position: sticky;
+  top: 64px;
+  left: 160vw;
+  width: max-content;
+  display: inline;
+  z-index: 2;
 }
 
 
 .header{
-    display: grid;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
+  display: grid;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 .navigation-bar{
-    position: sticky;
-    top: 0px;
-    right: 0px;
-    z-index: 1;
-    /* background: #d43bff; */
-    font-weight: bold;
+  position: sticky;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  /* background: #d43bff; */
+  font-weight: bold;
 }
 
 .nav-btn{
-   
-    border-radius: 6px;
-    font-weight: bold;
-    padding: 4px 8px;
-    background-color: #d955ff;
-    border: 2px solid #b700eb;
-    color:white;
-   
+ 
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 4px 8px;
+  background-color: #d955ff;
+  border: 2px solid #b700eb;
+  color:white;
+ 
 }
 
 
 .nav-btn:active{
-    background-color:#9f14c6;
-    color:white;
+  background-color:#9f14c6;
+  color:white;
 
 }
 
 .nav-btn:hover{
-    color: white;
-    /* background-color:#b700eb; */
-    box-shadow: 3px 3px rgb(240, 155, 237);
+  color: white;
+  /* background-color:#b700eb; */
+  box-shadow: 3px 3px rgb(240, 155, 237);
 }
 .form-control{
-    /* background-color: #f8dfff; */
+  /* background-color: #f8dfff; */
 }
 
 
 .form-btn{
-    border-radius: 6px;
-    font-weight: bold;
-    padding: 4px 8px;
-    background-color: #d955ff;
-    border: 2px solid #b700eb;
-    color:white;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 4px 8px;
+  background-color: #d955ff;
+  border: 2px solid #b700eb;
+  color:white;
 }
 
 .form-btn:active{
-    background-color:#9f14c6;
-    color:white;
+  background-color:#9f14c6;
+  color:white;
 
 }
 
 .form-btn:hover{
-    color: white;
-    /* background-color:#b700eb; */
-    /* box-shadow: 3px 3px rgb(240, 155, 237); */
+  color: white;
+  /* background-color:#b700eb; */
+  /* box-shadow: 3px 3px rgb(240, 155, 237); */
 }
 .sub-btn:hover{
-     background-color: #d43bff;
+   background-color: #d43bff;
 }
 
 @media screen and (max-width: 400px) {
-    .form-signUp{
-      background-color: lightgreen;
-      font-size:small;
-    }
-    /* .form-control{
-            font-size: 5px;
-    } */
+  .form-signUp{
+    background-color: lightgreen;
+    font-size:small;
   }
-  .min-vw-100 {
-    min-width: 98vw!important;
+  /* .form-control{
+          font-size: 5px;
+  } */
+}
+.min-vw-100 {
+  min-width: 98vw!important;
 }
 
 .card-body{
-   
+ 
 }
 
 .card-header{
-    border-top-right-radius: 12px;
-    border-top-left-radius: 12px;
-    color:black;
-    /* background-color:#b700eb; */
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  color:black;
+  /* background-color:#b700eb; */
 }
 
 .about-section {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    color:white
-  }
-  .about-section h2 {
-    font-size: 28px;
-    margin: 20px 0;
-  }
-  .about-section ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .about-section li {
-    font-size: 17px;
-    margin: 10px 0;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color:white
+}
+.about-section h2 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+.about-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.about-section li {
+  font-size: 17px;
+  margin: 10px 0;
+}
 
 
 
 
 
 
-  
+
 /* 
 * {
-  margin: 0;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+margin: 0;
+padding: 0px;
+box-sizing: border-box;
+font-family: "Lato", sans-serif;
 }
 
 html {
-  background: #faf7f2;
-  background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+background: #faf7f2;
+background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
+box-sizing: border-box;
+font-family: "Lato", sans-serif;
+font-size: 14px;
+font-weight: 400;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+box-sizing: inherit;
 } */
 
 
 .subtle {
-    color: #060606;
-    font-weight: bold;
-  }
+  color: #060606;
+  font-weight: bold;
+}
+
+.main-card--cointainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 500px));
+  grid-gap: 50px;
+  justify-content: space-around;
+}
+
+.card-container {
+  margin: 25px auto 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.card-container img {
+  max-width: 100%;
+  height: 300px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  z-index: 1;
+}
+
+.card-body {
+  display: inline-block;
+}
+
+.card-number {
+  margin-top: 15px;
+}
+
+.card-circle {
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 12px;
+  height: 25px;
+  text-align: center;
+  width: 25px;
+}
+
+.card-author {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.card-description {
+ 
   
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+}
+
+.card-read {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin: 5px 0 20px;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.card-read:after {
+  background-color: #b8bddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 9px;
+  width: 75%;
+}
+
+.card-tag {
+  float: right;
+  margin: 5px 0 0;
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.card-tag:hover {
+  background: #aaa;
+  color: black;
+}
+
+.card-media {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
+    0 0 100px 3px rgba(0, 0, 0, 0.25);
+  height: 1px;
+  margin: -1px auto 0;
+  width: 80%;
+  z-index: -1;
+}
+
+@media (max-width: 998px) {
   .main-card--cointainer {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 500px));
+    grid-template-columns: repeat(1, minmax(200px, 500px));
     grid-gap: 50px;
     justify-content: space-around;
   }
-  
-  .card-container {
-    margin: 25px auto 0;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-  
-  .card-container img {
-    max-width: 100%;
-    height: 300px;
-  }
-  
-  .card {
-    background-color: #fff;
-    padding: 30px;
-    position: relative;
-    box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
-    z-index: 1;
-  }
-  
-  .card-body {
-    display: inline-block;
-  }
-  
-  .card-number {
-    margin-top: 15px;
-  }
-  
-  .card-circle {
-    border: 1px solid #aaa;
-    border-radius: 50%;
-    display: inline-block;
-    line-height: 22px;
-    font-size: 12px;
-    height: 25px;
-    text-align: center;
-    width: 25px;
-  }
-  
-  .card-author {
-    display: block;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    margin: 15px 0 0;
-    text-transform: uppercase;
-  }
-  
-  .card-title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 60px;
-    font-weight: 300;
-    line-height: 60px;
-    margin: 10px 0;
-    text-transform: capitalize;
-  }
-  
-  .card-description {
-   
-    
-    font-weight: 300;
-    line-height: 22px;
-    margin: 10px 0;
-  }
-  
-  .card-read {
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 6px;
-    margin: 5px 0 20px;
-    position: relative;
-    text-align: right;
-    text-transform: uppercase;
-  }
-  
-  .card-read:after {
-    background-color: #b8bddd;
-    content: "";
-    display: block;
-    height: 1px;
-    position: absolute;
-    top: 9px;
-    width: 75%;
-  }
-  
-  .card-tag {
-    float: right;
-    margin: 5px 0 0;
-    border: 1px solid #aaa;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .card-tag:hover {
-    background: #aaa;
-    color: black;
-  }
-  
-  .card-media {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card-shadow {
-    background-color: #fff;
-    box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
-      0 0 100px 3px rgba(0, 0, 0, 0.25);
-    height: 1px;
-    margin: -1px auto 0;
-    width: 80%;
-    z-index: -1;
-  }
-  
-  @media (max-width: 998px) {
-    .main-card--cointainer {
-      display: grid;
-      grid-template-columns: repeat(1, minmax(200px, 500px));
-      grid-gap: 50px;
-      justify-content: space-around;
-    }
-  
-  
-  }
-  
-  
-  
-  
-  
-  
-  
+
+
+}
+
+
+
+
+
+
+
+
+
+.navbar {
+  padding-top: 18px;
+  text-align: center;
+}
+
+.navbar h1 {
+  padding-bottom: 20px;
+  text-transform: capitalize;
+}
+
+
+.flex-container{
+  display: flex;
+}
+.box{
+  border: 2px solid rebeccapurple;
+  margin: 5px;
+  width: 500px;
+  padding: 20px;
+  background:#cc78e4;
+  color:white;
+  border-radius: 22px;
+  cursor: pointer;
+}
+.homepageText{
+  color: white;
+  margin: auto;
+  align-items: center;
+  align-self: center;
+  font-size: 40px;
+  /* text-shadow: #060606 12px; */
+  text-shadow: 2px 2px #37ff00;
+}
+
+.homepage{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  margin-top: 500px;
+  position: relative;
+  top: 115px;
+
+}
+
+.about-section{
+
 
   
-  .navbar {
-    padding-top: 50px;
-    text-align: center;
-  }
-  
-  .navbar h1 {
-    padding-bottom: 20px;
-    text-transform: capitalize;
-  }
-  
+}
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+

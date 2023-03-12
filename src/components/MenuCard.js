@@ -7,7 +7,8 @@ const MenuCard = ({ menuData }) => {
     <>
       <section className="main-card--cointainer">
         {menuData.map((curElem) => {
-          const { id, name, price, image,Industry_Certification,Subscidy_Available,Contact_Details, description } = curElem;
+          const {id, name,image, contact_details,type_of_source, service_location, subsidy_scheme, subsidy_percentage, industry_certification_name, industry_certification_no, cost_per_unit
+    } = curElem;
 
           return (
             <>
@@ -16,19 +17,19 @@ const MenuCard = ({ menuData }) => {
                   <div className="card-body">
                     <span className="card-number card-circle subtle">{id}</span>
                     <h2 className="card-title"> {name} </h2>
-                    <span className="card-description subtle">
+                    {/* <span className="card-description subtle">
                       {description}
-                    </span>
+                    </span> */}
                     <div className="card-read">Read</div>
-                    <span className="card-author subtle">Price: {price}</span>
-                    <span className="card-author subtle">Industries Certification: {Industry_Certification}</span>
-                    <span className="card-author subtle">Subcidy: {Subscidy_Available}</span>
-                    <span className="card-author subtle">Contact Detail: {Contact_Details}</span>
+                    <span className="card-author subtle">Cost perUnit: {cost_per_unit}</span>
+                    <span className="card-author subtle">Industries Certification: {industry_certification_no}</span>
+                    <span className="card-author subtle">subcidy scheme: {subsidy_scheme}</span>
+                    <span className="card-author subtle">Contact Detail: {contact_details}</span>
 
                   </div>
                   <img src={image} alt="images" className="card-media" />
 
-                  <span className="card-tag  subtle">Order Now</span>
+                  <span className="card-tag  subtle">Request Call</span>
                 </div>
               </div>
             </>

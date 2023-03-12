@@ -7,13 +7,13 @@ const Home = () => {
 
 
   return (
-    <div className={"container my-3"} style={{
+    <div className={" homepage container my-3"} style={{
       
     position: "relative",
     bottom:"74px"
     }}>
  
-  
+  <div className="homepageText" >Getting Started With Clean Energy</div>
  {/* <Notes/> */}
 {/* <ConsumerForm/> */}
     </div>

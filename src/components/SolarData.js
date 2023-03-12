@@ -15,7 +15,7 @@ const Menu = [
   
     {
       id: 2,
-      image: "images/imgs2.jpg",
+      image: "images/imgs2.png",
       name: "Havells Energy Pvt. Ltd.",
       type_of_source:  "Solar",
       location: "Nashik",
@@ -28,7 +28,7 @@ const Menu = [
     },
     {
       id: 3,
-      image: "images/imgs3.jpg",
+      image: "images/imgs3.png",
       name: "Emmvee Group",
       type_of_source:  "Solar",
       location: "Dhule",
@@ -42,7 +42,7 @@ const Menu = [
     
     {
       id: 4,
-      image: "images/imgs4.jpg",
+      image: "images/imgs4.png",
       name: "Azure Power",
       type_of_source:  "Solar",
       location: "Panvel",
@@ -55,7 +55,7 @@ const Menu = [
     },
     {
       id: 5,
-      image: "images/imgs5.jpg",
+      image: "images/imgs5.png",
       name: "Vikram Solar",
       type_of_source:  "Solar",
       location: "Latur",

@@ -52,7 +52,7 @@ const {bgColor}=useContext(bgContext);
         if (response.status === 200) {
           setTypeUser(typeUser)
           localStorage.setItem("token",data.authtoken);
-          navigate(`/`);
+          navigate(`/consumerform`);
 
         //  localStorage.setItem("token",data.authtoken);
         //  navigate(`/consumerform`);

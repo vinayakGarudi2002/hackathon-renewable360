@@ -13,7 +13,7 @@ app.use("/api/vendor_data",require("./routes/vendor_data"))
 app.use("/api/energy_source",require("./routes/energy_source"))
 app.use("/api/consumer",require("./routes/consumer"))
 app.use("/api/auth",require("./routes/auth"))
-app.use("/api/notes",require("./routes/notes"))
+// app.use("/api/notes",require("./routes/notes"))
 // app.use("/api/notes").require("./routes/notes")
 
 app.listen(port, () => {

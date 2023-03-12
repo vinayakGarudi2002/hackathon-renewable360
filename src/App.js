@@ -17,6 +17,7 @@ import UserState from "./context/User/UserState";
 import Addproduct from "./components/Addproduct";
 import VendorState from "./context/vendor/VendorState";
 import EnergySource from "./components/EnergySource";
+import Solar from "./components/Solar";
 // import setBodyColor from './setBodyColor'
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
                       <Route path="/consumerform" element={<ConsumerForm />} />
                       <Route path="/addproduct" element={<Addproduct />} />
                       <Route path="/energysources" element={<EnergySource />} />
+                      <Route path="/solar" element={<Solar />} />
                     </Routes>
                     {/* </div> */}
                   </Router>
